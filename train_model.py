@@ -22,14 +22,14 @@ def create_model():
     model = Sequential()
     # first layer has 8 units and input_dim is dimention of input state vector
     # relu activation is simple and linear 
-    model.add(Dense(units=8, activation='relu', input_dim=2))  
-    model.add(Dense(units=64, activation='relu'))
-    model.add(Dense(units=128, activation='relu'))
-    model.add(Dense(units=128, activation='relu'))
-    model.add(Dense(units=128, activation='relu'))
-    model.add(Dense(units=64, activation='relu'))
-    model.add(Dense(units=8, activation='relu'))
-    model.add(Dense(2, init='normal'))
+    model.add(Dense(units=8, kernel_initializer="normal",activation='relu', input_dim=2))  
+    model.add(Dense(units=64, kernel_initializer="normal",activation='relu'))
+    model.add(Dense(units=128, kernel_initializer="normal",activation='relu'))
+    model.add(Dense(units=128, kernel_initializer="normal",activation='relu'))
+    model.add(Dense(units=128, kernel_initializer="normal",activation='relu'))
+    model.add(Dense(units=64, kernel_initializer="normal",activation='relu'))
+    model.add(Dense(units=8, kernel_initializer="normal",activation='relu'))
+    model.add(Dense(2, kernel_initializer="normal"))
     return model
 
     
