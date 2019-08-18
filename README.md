@@ -16,6 +16,7 @@ For known output Y computing the required input state is done by method called I
 Generalized dimension of input is row vector of size (nx1), dimension of output state row vector is (mx1) and transformation matrix **R** is of dimension (mxn). In practice it is not guaranteed that **R** is invertible matrix, most often it is rectangular and hence we need to take pseudoinverse to get **X** from given **Y** .
 
 ### Neural Network
+
 #### Training results
 
 Accuracy
@@ -50,9 +51,10 @@ conda install -c anaconda tensorflow-gpu
 conda install -c anaconda keras-gpu 
 ```
 
--Read more about tensorflow installation instruction instructions [tensorflow](https://www.tensorflow.org/install)
--Keras installation instructions [keras.io](https://keras.io/#installation)
+Read more about tensorflow installation instruction instructions [tensorflow](https://www.tensorflow.org/install)
+and Keras installation instructions [keras.io](https://keras.io/#installation)
 
+---
 ### Usage
 Run train_model.py to train model from given dataset
 
@@ -62,7 +64,10 @@ Load and Test allready trained models
 
 ```python test_model.py```
 
+---
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+---
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
