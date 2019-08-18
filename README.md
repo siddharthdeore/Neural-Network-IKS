@@ -26,8 +26,7 @@ Loss
 
 ### Installation
 Create conda envirnoment
-```
-Install tensorflow, read more 
+
 ```conda create -n tensorflow pip python=3.6```
 
 Activate environoment
