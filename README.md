@@ -1,6 +1,6 @@
 # Neural-Network-IKS
 Deep Sequential Neural Network based Inverse kinematics solver for 2 degree of freedom planar robotic manipulator. 
-![](https://img.shields.io/github/stars/siddharthdeore/Neural-Network-IKS.svg) ![](https://img.shields.io/github/forks/siddharthdeore/Neural-Network-IKS.svg) ![](https://img.shields.io/github/tag/siddharthdeore/Neural-Network-IKS.svg) ![](https://img.shields.io/github/release/siddharthdeore/Neural-Network-IKS.svg) ![](https://img.shields.io/github/issues/siddharthdeore/Neural-Network-IKS.svg)
+![](https://img.shields.io/github/stars/siddharthdeore/Neural-Network-IKS.svg) ![](https://img.shields.io/github/forks/siddharthdeore/Neural-Network-IKS.svg) ![](https://img.shields.io/github/tag/siddharthdeore/Neural-Network-IKS.svg) ![](https://img.shields.io/github/issues/siddharthdeore/Neural-Network-IKS.svg)
 
 ### Problem Definition
 
