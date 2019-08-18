@@ -23,8 +23,11 @@ Generalized dimension of input is row vector of size (nx1), dimension of output 
 ### Neural Network
 ### Installation
 Create conda envirnoment
+
 ```conda create -n tensorflow_cpu pip python=3.6```
+
 Activate environoment
+
 ```activate tensorflow_cpu```
 
 ```conda install numpy```
