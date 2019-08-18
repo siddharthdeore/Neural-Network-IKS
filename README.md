@@ -26,33 +26,34 @@ Loss
 
 ### Installation
 Create conda envirnoment
-
+```
+Install tensorflow, read more 
 ```conda create -n tensorflow pip python=3.6```
 
 Activate environoment
 
 ```activate tensorflow```
 
-Install some common pacages
+Install required pacages
 
-```conda install -c anaconda numpy```
+```sh
+conda install -c anaconda numpy
+conda install -c conda-forge matplotlib
+conda install -c conda-forge tensorflow 
+conda install -c conda-forge keras 
+conda install -c anaconda h5py
+```
 
-```conda install -c conda-forge matplotlib```
-For CPU version
-Install tensorflow read instructions [tensorflow](https://www.tensorflow.org/install)
-
-```conda install -c conda-forge tensorflow ```
-
-install keras from [keras.io](https://keras.io/#installation)
-
-```conda install -c conda-forge keras ```
-
-```conda install -c anaconda h5py ```
 or for GPU
+
 ```sh
 conda install -c anaconda tensorflow-gpu 
 conda install -c anaconda keras-gpu 
 ```
+
+-Read more about tensorflow installation instruction instructions [tensorflow](https://www.tensorflow.org/install)
+-Keras installation instructions [keras.io](https://keras.io/#installation)
+
 ### Usage
 Run train_model.py to train model from given dataset
 
