@@ -31,9 +31,13 @@ Activate environoment
 ```conda install numpy```
 
 ```conda install matplotlib```
+
 install tensorflow from [tensorflow](https://www.tensorflow.org/install)
+
 ```conda install tensorflow```
+
 install keras from [keras.io](https://keras.io/#installation)
+
 ```conda install keras```
 
 ```conda install -c anaconda h5py ```
