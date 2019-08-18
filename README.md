@@ -10,8 +10,6 @@ For any input output system of with input state **X** and output states **Y** ar
 
 transformation matrix **R** maps input vector to output vector also known as forward kinematics.
 
-
-
 For known output Y computing the required input state is done by method called Inverse kinematics algebraically expressed as:
 
 **X=Y/R = R^-1\*Y** 
@@ -36,15 +34,10 @@ Activate environoment
 
 ```conda install tensorflow```
 
-```conda install scikit-learn```
-
 ```conda install keras```
 
 ```conda install -c anaconda h5py ```
 
-```conda install -c anaconda graphviz```
-
-```conda install -c pydot```
 
 ### Usage
 Run train_model.py to train model from given dataset
