@@ -17,8 +17,10 @@ Generalized dimension of input is row vector of size (nx1), dimension of output 
 
 ### Neural Network
 #### Training results
+
 Accuracy
 ![acc](/fig/acc.png)
+
 Loss
 ![loss](/fig/loss.png)
 
