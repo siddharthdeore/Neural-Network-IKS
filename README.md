@@ -31,9 +31,9 @@ Activate environoment
 ```conda install numpy```
 
 ```conda install matplotlib```
-
+install tensorflow from [tensorflow](https://www.tensorflow.org/install)
 ```conda install tensorflow```
-
+install keras from [keras.io](https://keras.io/#installation)
 ```conda install keras```
 
 ```conda install -c anaconda h5py ```
@@ -41,9 +41,13 @@ Activate environoment
 
 ### Usage
 Run train_model.py to train model from given dataset
+
 ```python train_model.py```
+
 Load and Test allready trained models
+
 ```python test_model.py```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 ## License
