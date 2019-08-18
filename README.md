@@ -1,7 +1,6 @@
-```conda install -c anaconda graphviz```
 # Neural-Network-IKS
 Deep Sequential Neural Network based Inverse kinematics solver for 2 degree of freedom planar robotic manipulator. 
-
+[![Build Status](https://travis-ci.org/siddharthdeore/Neural-Network-IKS/.svg?branch=master)](https://travis-ci.org/siddharthdeore/Neural-Network-IKS/)
 ### Problem Definition
 
 For any input output system of with input state **X** and output states **Y** are related with transformation matrix **R** such a way that:
@@ -26,14 +25,21 @@ Create conda envirnoment
 ```conda create -n tensorflow_cpu pip python=3.6```
 Activate environoment
 ```activate tensorflow_cpu```
-install required packages
+
 ```conda install numpy```
+
 ```conda install matplotlib```
+
 ```conda install tensorflow```
+
 ```conda install scikit-learn```
+
 ```conda install keras```
+
 ```conda install -c anaconda h5py ```
+
 ```conda install -c anaconda graphviz```
+
 ```conda install -c pydot```
 
 ### Usage
