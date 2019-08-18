@@ -28,11 +28,15 @@ Loss
 ### Installation
 Create conda envirnoment
 
-```conda create -n tensorflow pip python=3.6```
+```sh
+conda create -n tensorflow pip python=3.6
+```
 
 Activate environoment
 
-```activate tensorflow```
+```sh
+activate tensorflow
+```
 
 Install required pacages
 
