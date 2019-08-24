@@ -14,21 +14,31 @@ import matplotlib.pyplot as plt
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.models import load_model
+from keras.wrappers.scikit_learn import KerasRegressor
+from keras.callbacks import ModelCheckpoint
+
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_absolute_error
 
 from utilities import absolute_file_path
+
 
 # neural network sequantial model for 2 dof rootic arm
 def create_model():
     model = Sequential()
     # first layer has 8 units and input_dim is dimention of input state vector
     # relu activation is simple and linear 
-    model.add(Dense(units=8, kernel_initializer="normal",activation='relu', input_dim=2))  
-    model.add(Dense(units=128, kernel_initializer="normal",activation='relu'))
-    model.add(Dense(units=128, kernel_initializer="normal",activation='relu'))
+    ip_dim = 2 # number of input states (end effector cordinates)
+    model.add(Dense(units=8, kernel_initializer="normal",activation='relu', input_dim=ip_dim))
     model.add(Dense(units=128, kernel_initializer="normal",activation='relu'))
     model.add(Dense(units=128, kernel_initializer="normal",activation='relu'))
     model.add(Dense(units=8, kernel_initializer="normal",activation='relu'))
     model.add(Dense(2, kernel_initializer="normal"))
+
+    # compile model
+    model.compile(loss='mean_absolute_error', optimizer= 'sgd', metrics=['accuracy'])
+    # show model summary
+    model.summary()     
     return model
 
     
@@ -52,15 +62,20 @@ if __name__ == '__main__':
     # prediction dataset
     dataset_predict = np.loadtxt(absolute_file_path('datasets/pred_2dof.csv'), delimiter=",")
     x_predict=dataset_predict[:,:2]    
-    # show model summary
-    model.summary() 
 
-    # compile model
-    model.compile(loss='mean_absolute_error', optimizer= 'adam', metrics=['accuracy'])
     
     # train model for loaded dataset 
 
-    history = model.fit(x_train, y_train, batch_size=100, epochs=100, verbose=1, validation_data=(x_test, y_test))
+    # history = model.fit(x_train, y_train, batch_size=100, epochs=100, verbose=1, validation_data=(x_test, y_test))
+
+    '''
+    saves the model weights after each epoch if the validation loss decreased
+    '''
+    checkpointer = ModelCheckpoint(filepath=absolute_file_path('datasets/tmp/temp_weights.hdf5'), verbose=1, save_best_only=True)
+
+    model_regressor = KerasRegressor(build_fn=create_model, epochs=100, batch_size=50,verbose=1)
+    model_regressor.fit(x_train, y_train)
+
 
     # Test model
     score = model.evaluate(x_test, y_test, verbose=0)
@@ -68,10 +83,15 @@ if __name__ == '__main__':
     print('Test accuracy:', score[1])
 
     # Predict output
-    solution=model.predict(x_predict)
+    solution = model_regressor.predict(x_predict)
+    # solution=model.predict(x_predict)
     print(solution)
-    
-    model.save(absolute_file_path('models/model_2dof.h5'))  # creates a HDF5 model file 
+
+'''
+saves the model weights after each epoch if the validation loss decreased
+'''
+checkpointer = ModelCheckpoint(filepath='/tmp/weights.hdf5', verbose=1, save_best_only=True)
+    # model.save(absolute_file_path('models/model_2dof.h5'))  # creates a HDF5 model file 
 
     # Plot training & validation accuracy values
     plt.plot(history.history['acc'])

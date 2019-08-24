@@ -33,6 +33,9 @@ def create_model():
     model.add(Dense(units=64, kernel_initializer="normal",activation='relu'))
     model.add(Dense(units=8, kernel_initializer="normal",activation='relu'))
     model.add(Dense(3, kernel_initializer="normal"))
+    # compile model
+    model.compile(loss=losses.squared_hinge, optimizer= 'adam', metrics=['accuracy'])
+
     return model
 
     
@@ -78,8 +81,6 @@ if __name__ == '__main__':
 
         
 
-    # compile model
-    model.compile(loss=losses.squared_hinge, optimizer= 'adam', metrics=['accuracy'])
     
     # train model for loaded dataset 
     history = model.fit(dataX_train, dataY_train, batch_size=20, epochs=20, verbose=1, validation_data=(dataX_test, dataY_test))
