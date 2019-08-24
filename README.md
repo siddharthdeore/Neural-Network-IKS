@@ -13,7 +13,7 @@ transformation matrix **A** maps input vector to output vector also known as for
 
 For known output Y computing the required input state is done by method called Inverse kinematics algebraically expressed as:
 
-<img src="https://latex.codecogs.com/svg.latex?X&space;=&space;A^{-1}&space;Y&space;=&space;A^T(AA^T)^{-1}">
+<img src="https://latex.codecogs.com/svg.latex?X&space;=&space;A^{-1}&space;Y&space;=&space;A^T(AA^T)^{-1}&space;Y">
 
 Generalized dimension of input is row vector of size (nx1), dimension of output state row vector is (mx1) and transformation matrix **A** is of dimension (mxn). In practice it is not guaranteed that **A** is invertible matrix, most often it is rectangular and hence we need to take pseudoinverse to get **X** from given **Y** .
 
