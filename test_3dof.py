@@ -7,19 +7,16 @@ from keras.layers import Dense
 from keras.models import load_model
 from keras.utils import plot_model
 
+from utilities import absolute_file_path
 
-# for file handling
-def absolute_file_path(rel_path):
-    script_dir = os.path.dirname(__file__)
-    return os.path.join(script_dir, rel_path)
 
-dataset_train = np.loadtxt(absolute_file_path('trains.csv'), delimiter=",")
+dataset_train = np.loadtxt(absolute_file_path('datasets/trains.csv'), delimiter=",")
 x_predict=dataset_train[:,:2]
 y_predict=dataset_train[:,2:]
 
 
 # Load precompiled model
-model = load_model(absolute_file_path('model_s.h5'))
+model = load_model(absolute_file_path('models/model_s.h5'))
 model.summary()
 solution=model.predict(x_predict,verbose=2)
 

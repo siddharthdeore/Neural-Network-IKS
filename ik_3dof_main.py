@@ -19,6 +19,7 @@ import keras.optimizers as Optimizers
 
 from sklearn import preprocessing
 
+from utilities import absolute_file_path
 
 # neural network sequantial model
 def create_model():
@@ -39,7 +40,7 @@ def create_model():
     
     #optm = Optimizers.SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True)
     #optm = Optimizers.RMSprop(lr=0.001, rho=0.9, epsilon=1e-06, decay=0.0)
-    optm = Optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False) #
+    optm = Optimizers.Adam(lr=0.00001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False) #
     # compile model
     model.compile(loss='mse', optimizer=optm, metrics=['accuracy'])
     #loss mse,mean_absolute_error
@@ -55,16 +56,16 @@ if __name__ == '__main__':
 
     print('Loading datasets')
     # load training dataset
-    dataset_train = np.loadtxt('trains.csv', delimiter=",")
+    dataset_train = np.loadtxt(absolute_file_path('datasets/trains.csv'), delimiter=",")
 
     x_train=dataset_train[:,:2] # (input vector) first two columns 
     y_train=dataset_train[:,2:] # (output vector) second and third column
     # load test dataset
-    dataset_test = np.loadtxt('tests.csv', delimiter=",")
+    dataset_test = np.loadtxt(absolute_file_path('datasets/tests.csv'), delimiter=",")
     x_test=dataset_test[:,:2]
     y_test=dataset_test[:,2:]
 
-    dataset_pred = np.loadtxt('preds.csv', delimiter=",")
+    dataset_pred = np.loadtxt(absolute_file_path('datasets/preds.csv'), delimiter=",")
     x_pred=dataset_pred[:,:2]
     y_pred=dataset_pred[:,2:]
 

@@ -145,29 +145,3 @@ for i in range(EPOCHS):
     # plot (1) loss & (2) mean square error on test set, vs. training steps
     loss_hist.append(history.history['loss'][0])
     error_hist.append(error)
-    clear_output()
-    plt.figure(figsize=(16, 4))
-    line1, = plt.plot(error_hist, label="error hist")
-    line2, = plt.plot(loss_hist, label="loss hist")
-    plt.grid()
-    plt.title('mean squraed error on test set vs. epoch')
-    plt.legend((line1, line2), ('error hist', 'loss hist'))
-    plt.show()
-
-    # randomly showcase 12 examples to visually see how the network is doing
-    xy_temp, theta_temp = get_xy_and_theta_2(12)
-    fig, ax = plt.subplots(nrows=3, ncols=4, figsize=(16, 12))
-    for i, row in enumerate(ax):
-        for j, col in enumerate(row):
-            idx = j + i * 4
-            theta = model.predict(np.reshape(xy_temp[idx], (1, 2)))
-            
-            # plot xy from predicted angles and ground truth, for 2-segment arm
-            a = get_positions_2(np.squeeze(theta))
-            col.plot([0, a[0][0]], [0, a[0][1]])
-            col.plot([a[0][0], a[1][0]], [a[0][1], a[1][1]])
-            col.plot(xy_temp[idx][0], xy_temp[idx][1], 'bo', markersize=10)
-            col.plot(a[1][0], a[1][1], 'ro', markersize=10)
-            col.set_xlim([-3, 3])
-            col.set_ylim([-3, 3])
-    plt.show()
