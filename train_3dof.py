@@ -17,7 +17,7 @@ from keras.models import load_model
 from keras import losses
 
 from sklearn import preprocessing
-from tensoflow import sin, cos,tan
+#from tensoflow import sin, cos,tan
 
 from utilities import absolute_file_path
 
