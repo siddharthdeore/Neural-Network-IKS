@@ -49,17 +49,17 @@ if __name__ == '__main__':
 
     print('Loading datasets')
     # load training dataset
-    dataset_train = np.loadtxt(absolute_file_path('trains.csv'), delimiter=",")
+    dataset_train = np.loadtxt(absolute_file_path('datasets/trains.csv'), delimiter=",")
 
     x_train=dataset_train[:,:2] # (input vector) first two columns 
-    y_train=dataset_train[:,2:] # (output vector) second and third column
+    y_train=dataset_train[:,2:] # (output vector) third fourth and fifth column
     print(x_train)
     # load test dataset
-    dataset_test = np.loadtxt(absolute_file_path('tests.csv'), delimiter=",")
+    dataset_test = np.loadtxt(absolute_file_path('datasets/tests.csv'), delimiter=",")
     x_test=dataset_train[:,:2]
     y_test=dataset_train[:,2:]
     # prediction dataset
-    dataset_predict = np.loadtxt(absolute_file_path('preds.csv'), delimiter=",")
+    dataset_predict = np.loadtxt(absolute_file_path('datasets/preds.csv'), delimiter=",")
     x_predict=dataset_predict[:,:2]    
     y_predict=dataset_predict[:,2:]    
     # show model summary
@@ -96,7 +96,7 @@ if __name__ == '__main__':
     #solution=model.predict(x_predict)
     #print(solution)
     
-    model.save(absolute_file_path('model_s.h5'))  # creates a HDF5 model file 
+    model.save(absolute_file_path('models/model_s.h5'))  # creates a HDF5 model file 
 
     # Plot training & validation accuracy values
     plt.plot(history.history['acc'])
