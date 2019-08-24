@@ -18,6 +18,7 @@ For known output Y computing the required input state is done by method called I
 Generalized dimension of input is row vector of size (nx1), dimension of output state row vector is (mx1) and transformation matrix **A** is of dimension (mxn). In practice it is not guaranteed that **A** is invertible matrix, most often it is rectangular and hence we need to take pseudoinverse to get **X** from given **Y** .
 
 ### Neural Network
+ANN
 
 #### Training results
 
