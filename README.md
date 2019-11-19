@@ -75,6 +75,17 @@ Load and Test allready trained models
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+## Cite this repository in publication
+```
+@misc{Neural-Network-IKS,
+  author = {Deore, Siddharth},
+  title = {Neural Network based Inverse Kinematics of planar robotic arm},
+  year = {2019},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/siddharthdeore/Neural-Network-IKS}},
+}
+```
 ---
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
