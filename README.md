@@ -4,21 +4,21 @@ Deep Sequential Neural Network based Inverse kinematics solver for 2 degree of f
 
 ### Problem Definition
 
-For any input output system of with input state **X** and output states **Y** are related with transformation matrix **A** such a way that:
+For any input output system with input state **X** and output states **Y** are related with transformation matrix **A** such a way that:
 
 <img src="https://latex.codecogs.com/svg.latex?Y&space;=&space;A&space;X">
 
 
 transformation matrix **A** maps input vector to output vector also known as forward kinematics.
 
-For known output Y computing the required input state is done by method called Inverse kinematics algebraically expressed as:
+For known output Y, computing the required input state is done by method called Inverse kinematics algebraically expressed as:
 
 <img src="https://latex.codecogs.com/svg.latex?X&space;=&space;A^{-1}&space;Y&space;=&space;A^T(AA^T)^{-1}&space;Y">
 
 Generalized dimension of input is row vector of size (nx1), dimension of output state row vector is (mx1) and transformation matrix **A** is of dimension (mxn). In practice it is not guaranteed that **A** is invertible matrix, most often it is rectangular and hence we need to take pseudoinverse to get **X** from given **Y** .
 
 ### Neural Network
-ANN
+Fully connected Feed Forward
 
 #### Training results
 
