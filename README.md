@@ -4,7 +4,7 @@ Deep Sequential Neural Network based Inverse kinematics solver for 2 degree of f
 
 ### Problem Definition
 
-For any input output system with input state **X** and output states **Y** are related with transformation matrix **A** such a way that:
+I'm looking forward to solve over deterimined system with input state **X** and output states **Y** are related with transformation matrix **A** such a way that:
 
 <img src="https://latex.codecogs.com/svg.latex?Y&space;=&space;A&space;X">
 
