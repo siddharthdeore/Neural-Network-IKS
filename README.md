@@ -86,6 +86,13 @@ Pull requests are welcome. For major changes, please open an issue first to disc
   howpublished = {\url{https://github.com/siddharthdeore/Neural-Network-IKS}},
 }
 ```
+
+
+## Maintainers
+This repository is maintained by:
+|<img src="https://github.com/siddharthdeore.png" width="32">| [siddharth deore](https://github.com/siddharthdeore)|
+|--|--|
+
 ---
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
